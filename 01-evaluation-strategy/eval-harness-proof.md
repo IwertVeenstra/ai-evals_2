@@ -16,9 +16,10 @@ Our Q4 marketing campaign is building strong momentum. Social media engagement h
 
 ## Judge scores
 
-_Which model judged them, then the judge's reply:_
-_Version A: 1 or 0, one-sentence reason_
-_Version B: 1 or 0, one-sentence reason_
+Claude Opus 5.5 Medium to generate; ChatGPT undisclosed model to judge
+Version A: 1, Concise and faithful to the email, preserving all key results, the legal approval delay, creative readiness, and Friday deadline without adding unsupported claims.
+
+Version B: 0, Wordy and invents claims that the campaign is building strong momentum, assets are ready to launch, and the team is well poised for launch.
 
 ## Do you agree with the judge?
 
