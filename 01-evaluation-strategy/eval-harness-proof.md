@@ -12,7 +12,7 @@ Product video campaign delayed to November pending legal approval (creative read
 
 ## Version B output
 
-_Paste the output from the Version B chat._
+Our Q4 marketing campaign is building strong momentum. Social media engagement has climbed 25% month-over-month, a clear sign that our refreshed content calendar and paid ad experiments are resonating with audiences. Creative assets for the upcoming product video campaign are complete and ready to launch. While newsletter open rates have dipped from 42% to 35%, the team is already responding with new subject line tests next week. The video campaign’s launch has shifted to November as it awaits legal approval, keeping us well poised for launch. To keep results measurable, all campaign tracking links will be in place by Friday.
 
 ## Judge scores
 
