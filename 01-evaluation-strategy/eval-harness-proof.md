@@ -23,4 +23,4 @@ Version B: 0, Wordy and invents claims that the campaign is building strong mome
 
 ## Do you agree with the judge?
 
-_One line per version: agree or disagree, and why._
+Email too short for prompt 2 to really add value
