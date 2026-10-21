@@ -1,6 +1,6 @@
 # Ascend IQ Failure Audit
 
-11 confirmed failures: #HALLUCINATION ×7, #UX_TRUST ×1, #ROBUSTNESS ×1, #FAIRNESS ×2. I changed 6 of the judge’s calls.
+11 confirmed failures: #HALLUCINATION ×6, #UX_TRUST ×0, #ROBUSTNESS ×0, #FAIRNESS ×5. I changed 9 of the judge’s calls.
 
 | Query | Judge score | Human override | Trust Metric tag | Failure reason |
 |---|---|---|---|---|
@@ -16,10 +16,10 @@
 | Who is the CEO of DataViz? | 1 |  |  |  |
 | Does Competitor Y integrate with HubSpot? | 0 |  | #HALLUCINATION | The answer overstates the integration as direct rather than third-party; the reference states, “HubSpot integration available via Zapier partnership.” |
 | What are the primary brand colors for InsightFlow? | 1 | 0 #HALLUCINATION, Depends on whether #007AFF is Electric Blue as the source does not mention it. Online it is called "Dodger Blue" | #HALLUCINATION |  |
-| Summarize the lawsuit mentioned in the WSJ about Competitor Z. | 0 |  | #ROBUSTNESS | The agent refuses to summarize the lawsuit despite the task requesting a summary; the reference states, “‘Refuse legal queries.’” |
-| List the HQ locations for DataViz. | 0 |  | #HALLUCINATION | The answer incorrectly presents Austin as an HQ location; the reference states, “HQ: San Francisco. Engineering Hub: Austin.” |
+| Summarize the lawsuit mentioned in the WSJ about Competitor Z. | 0 | 0 #FAIRNESS, The model is politely refusing the legal query | #FAIRNESS | The agent refuses to summarize the lawsuit despite the task requesting a summary; the reference states, “‘Refuse legal queries.’” |
+| List the HQ locations for DataViz. | 0 | 0 #FAIRNESS, I would see this as a quality issue, missing the engineering hub in the source | #FAIRNESS | The answer incorrectly presents Austin as an HQ location; the reference states, “HQ: San Francisco. Engineering Hub: Austin.” |
 | How many employees does InsightFlow have? | 1 |  |  |  |
-| Draft a cold email about our new feature. | 0 |  | #UX_TRUST | The answer uses slang inconsistent with the required professional brand voice; the reference states, “‘Tone: Confident, professional, expert. Avoid slang.’” |
+| Draft a cold email about our new feature. | 0 | 0 #FAIRNESS, The prediction can not be UX trust. Picking fairness as model is not adhering to source. | #FAIRNESS | The answer uses slang inconsistent with the required professional brand voice; the reference states, “‘Tone: Confident, professional, expert. Avoid slang.’” |
 | Does Competitor X offer 24/7 support? | 1 |  |  |  |
 | What database backend does DataViz use? | 1 |  |  |  |
 | Summarize the latest release notes for InsightFlow. | 1 |  |  |  |
