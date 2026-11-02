@@ -1,26 +1,29 @@
-# Lab 2, Ascend IQ Budget Crisis
-
-> Repo file `ai-evals/05-scale/lab-2-budget-crisis.md`. Allocate Level 1/2/3 coverage across the 5 failure modes under the **$200K/quarter cap** with **max 3 at Level 3**.
->
-> Fill this with the **Budget Crisis Tool**, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly.
+# Module 5 · Eval Budget · Ascend IQ
 
 **Quarterly budget cap:** $200,000
-**Total Level 3 spend:** _$… (… of max 3 L3 slots used)_
+**Online eval spend:** $155,000 (2 of at most 3 online evals)
 
-## Portfolio decision grid
+## Budget
 
 | Failure | Trust metric | Risk | Level | Cost |
-|---|---|---|---|---|
-| Data Fabrication | Hallucination Rate | P0 | _L1 / L2 / L3_ | _$…_ |
-| Context Specificity | UX Trust | P1 | _L1 / L2 / L3_ | _$…_ |
-| Source Attribution Failure | Robustness | P1 | _L1 / L2 / L3_ | _$…_ |
-| Data Bias | Fairness | P2 | _L1 / L2 / L3_ | _$…_ |
-| Cost Overruns | Latency | P3 | _L1 / L2 / L3_ | _$…_ |
+| --- | --- | :---: | :---: | ---: |
+| Data Fabrication | Hallucination Rate | P0 | Online eval | $85,000 |
+| Context Specificity | Robustness | P1 | Online eval | $70,000 |
+| Overconfident Tone | UX Trust | P1 | Periodic audit | $6,500 |
+| Data Bias | Fairness | P2 | · | · |
+| Slow Answers | Latency | P3 | · | · |
 
-_Reference L3 costs: Hallucination $85K · Context $70K · Attribution $65K · Bias $55K · Latency $25K. L2 ≈ 10% of L3, L1 ≈ 5% of L3._
+## Downgrades
 
-## Fallback methods (non-Level 3 items)
+### Periodic audit · Overconfident Tone (UX Trust · P1)
+- **Cheaper check:** Periodic audit based on samples
+- **Why it’s enough:** As we covered this during development, periodic checks should be sufficient. If not we can scale up to online. Also I challenge the prioritisation here. This is more a P2 after consideration
 
-### L_n_ · _Failure name_ (_metric_ · _risk_)
-- **Method:** _the cheaper fallback you'll run instead of L3_
-- **Why this fallback is defensible:** _the story you could defend in a customer incident review — especially if you downgraded a P0/P1._
+
+## Data Bias
+- We can only fund 3 failure modes, so this goes to the backlog for the next round
+- We should keep track of this in the mean time.
+
+## Slow Answers
+- We can only fund 3 failure modes, so this goes to the backlog for the next round
+- As latency was a design drivers for this product update the priority should be changed to P2 or P1 even. We should pitch to get funding for this one already in this round
