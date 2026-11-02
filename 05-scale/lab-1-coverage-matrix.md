@@ -1,35 +1,36 @@
-# Lab 1, Ascend Analytics Coverage Matrix
+# Module 5 · Coverage Matrix · AI Voice Agent
 
-> Repo file `ai-evals/05-scale/lab-1-coverage-matrix.md`. Feeds the **Coverage / scale** slide of the final pitch deck (Module 6).
->
-> Fill this with the **Coverage Matrix Tool**, then **Copy markdown** and paste it over this file. The headings below mirror the tool's output exactly. **Force ≥2 ❌ gaps** — an all-green matrix isn't real.
+## Coverage Row
 
-**Product:** _…_
-
-## Coverage row
-
-| Product | Hallucination | Bias | Latency | Toxicity | Drift Monitoring |
+| Product | Hallucination Rate | Fairness | Latency | UX Trust | Robustness |
 |---|---|---|---|---|---|
-| _…_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ | _✅ / ⚠️ / ❌_ |
+| AI Voice Agent | ✅ Covered | ✅ Covered | ❌ Gap | ⚠️ Partial | ❌ Gap |
 
-## Method + Ground Truth (two ✅/⚠️ cells)
+## What Runs Today
 
-### _Risk name 1_
-- **Method:** _how you evaluate it_
-- **Ground truth:** _what you grade against_
+- An eval gate tests its answers to 300 billing questions before every release.
+- A supervisor listens to 10 random calls a week for tone.
+- A drift monitor alerts when callers start asking about things the agent wasn’t tested on.
 
-### _Risk name 2_
-- **Method:** _how you evaluate it_
-- **Ground truth:** _what you grade against_
+## Accepted Gap
 
-## Strategic acceptance
+**Robustness.** The lower performance is triggered on the user side and the user is more likely to understand and accept the poorer response from the voice agent
 
-**Accepted gap:** _which ❌ you're accepting_
+We’ll look again: If the share of user inputs that is messy, adversarial, or out-of-scope is relatively high and we can connect a loss of business value to due the lack of robustness 
 
-> _Why it's an acceptable risk right now + the kill criterion / date that would change the call._
+## Critical Gap
 
-## Critical mitigation
+We’ve flagged Latency as the most critical gap for AI Voice Agent because customers have already been complaining that getting a simple answer takes too long and have been churning.
 
-- **Critical gap:** _the ❌ you cannot accept_
-- **Why critical:** _…_
-- **Mitigation plan:** _concrete plan with a date/owner — not "we'll add it later"._
+We'll develop an eval for that specifically. A code-based one measuring if latency is staying under 2 seconds
+
+## After the Pressure Test
+
+Sharpening the treatment of the accepted gap by:
+- checking the data if the gap is indeed acceptable
+- installing monitoring so we can keep track of it
+
+More preciseness on how the latency gap is handled:
+- the check to do
+- where to put the gate
+- how often
