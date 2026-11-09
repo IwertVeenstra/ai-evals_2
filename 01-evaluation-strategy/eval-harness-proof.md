@@ -1,26 +1,13 @@
-# Compare Version A and Version B, Module 1 (optional notes)
+VERSION A:\
+- Social media engagement is up 25% month over month, thanks to the new content calendar and paid ad tests.
+- Newsletter open rate fell from 42% to 35%. New subject lines will be tested next week.
+- The product video is delayed until November while it waits for legal approval; the creative assets are ready. All tracking links are due Friday.
 
-> Optional. Use this file to keep your results from the Module 1 Hands-On Lab, **Compare Version A and Version B**. It is not graded; the Module 1 deliverable is `strategy-canvas.md`.
->
-> The steps, both prompts, the judge prompt, and the email are in the **Module 1 Lab Guide**.
+VERSION B:\
+**Q4 Marketing Campaign Update**
 
-## Version A output
+Our Q4 campaign is building strong momentum. Social media engagement climbed 25% month-over-month, driven by our new content calendar and paid ad experiments, a clear sign our audience is responding to fresh, consistent content. The product video campaign is also well positioned, with all creative assets complete and ready to launch in November once legal approval comes through. One area to watch is newsletter performance, where open rates dipped from 42% to 35%; next week we will test new subject lines to win readers back. To keep results measurable, please add all campaign tracking links by Friday. Thank you, team!
 
-Social media engagement up 25% month-over-month, driven by new content calendar and paid ad experiments.
-Newsletter open rate fell from 42% to 35%; new subject lines testing next week.
-Product video campaign delayed to November pending legal approval (creative ready); all campaign tracking links due Friday.
-
-## Version B output
-
-Our Q4 marketing campaign is building strong momentum. Social media engagement has climbed 25% month-over-month, a clear sign that our refreshed content calendar and paid ad experiments are resonating with audiences. Creative assets for the upcoming product video campaign are complete and ready to launch. While newsletter open rates have dipped from 42% to 35%, the team is already responding with new subject line tests next week. The video campaign’s launch has shifted to November as it awaits legal approval, keeping us well poised for launch. To keep results measurable, all campaign tracking links will be in place by Friday.
-
-## Judge scores
-
-Claude Opus 5.5 Medium to generate; ChatGPT undisclosed model to judge
-Version A: 1, Concise and faithful to the email, preserving all key results, the legal approval delay, creative readiness, and Friday deadline without adding unsupported claims.
-
-Version B: 0, Wordy and invents claims that the campaign is building strong momentum, assets are ready to launch, and the team is well poised for launch.
-
-## Do you agree with the judge?
-
-Email too short for prompt 2 to really add value
+Judge’s scores
+Version A: 1, Concise and faithful, preserving all key results, issues, causes, and deadlines without adding unsupported information.
+Version B: 0, Adds unsupported interpretations and claims (e.g., “strong momentum,” “clear sign our audience is responding,” and “well positioned”) that are not in the original email.
