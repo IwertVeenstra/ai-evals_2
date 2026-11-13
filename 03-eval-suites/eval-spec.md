@@ -1,17 +1,17 @@
-# Eval Spec · Own company praise without factual basis (#HALLUCINATION). Text overstates performance / value compared to the facts
+# Eval Spec · False response at odds with available quantitative data point (#HALLUCINATION), an output risk
 
 | Part | Spec |
 |---|---|
-| Target risk | Own company praise without factual basis (#HALLUCINATION). Text overstates performance / value compared to the facts |
-| Evaluator | Three checks, each looking at question, answer, reference. **Rule check:** IF the question asks for a quantitative data point AND that data point is present in the source data, PASS if the answer contains the exact quantitative data point as in the source data, FAIL if it does not. **Safety rule:** IF the question asks for a quantitative data point, PASS if the answer returns the exact available reference data using the template "Reference states: ", FAIL if it does not. **Judge (quantitative data point judge prompt):** IF the question asks for a quantitative data point, PASS if the answer uses neutral, objective phrasing and tone, FAIL if it does not. |
-| Threshold | 0%. Support: not yet defined (spec note: "Not sure what is meant here"). This line should give the evidence for choosing 0%, for example why no failures are acceptable and how many test cases the rate is measured on. |
-| Business stakes | We can not have hallucination with a B2B marketing intelligence product used by strategic decision makers |
+| Target risk | False response at odds with available quantitative data point (#HALLUCINATION), an output risk |
+| Evaluator | Code-based rule check: IF `<question>` asks for a quantitative data point AND that quantitative data point is present in the source data THEN PASS IF `<answer>` returns the exact quantitative data point as in the source data without corruption ELSE FAIL |
+| Threshold | 0%. What supports it: the case notes that enterprise clients are unforgiving. If Ascend IQ gives a poor answer, it can do lasting damage to the relationship. |
+| Business stakes | Companies pay upward of $50,000 a year. They expect no less than the most relevant and highest quality data. It is input to their strategies. Hallucination will most certainly result in the product failing with clients. Engagement will continue to drop and we won't stop client churn. |
 | Owner | PM |
 
 ## Messages
 
-**Engineering · acceptance criteria:** For every question that asks for a quantitative data point, the answer passes only if all three checks pass: (1) when the data point is in the source data, the answer contains it exactly as written there; (2) the answer returns the exact available reference data using the template "Reference states: "; and (3) the judge rates its phrasing and tone neutral and objective. If any one check fails, the answer fails; questions that do not ask for a quantitative data point are out of scope, and the threshold is 0% failures.
+**Engineering · acceptance criteria:** When the question asks for a quantitative data point and that data point is in the source data, the answer passes only if it contains that exact value from the source data, with no change to digits, units, decimals or sign; any other answer fails. The threshold is 0%, so a single failure blocks the answer, and questions that don't meet both conditions are outside this check.
 
-**Design · what the user sees:** The spec does not yet define the blocked state, so here is a proposal: the user never sees the blocked answer, and instead sees the figure exactly as the source states it, after the label "Reference states: ", in neutral wording.
+**Design · what the user sees:** When the check blocks an answer, the user never sees the wrong figure. They see a short, plain message saying Ascend IQ couldn't confirm that number against the source data, plus a link to the source so they can still get the exact value.
 
-**Leadership · risk and return:** This check stops the product from overstating our own company's performance or value beyond what the facts support. Strategic decision makers act on these answers, so one inflated number could cost their trust in a B2B marketing intelligence product. A 0% threshold costs us some blocked answers and the expense of running three checks on each quantitative question, and that is worth it because we can not have hallucination in this product.
+**Leadership · risk and return:** This check stops Ascend IQ from showing clients made-up or corrupted numbers. Clients pay upward of $50,000 a year and build their strategies on this data, so a single wrong figure can do lasting damage to the relationship. Holding the threshold at 0% costs some blocked answers, and it protects the engagement and retention we're currently losing to churn.
