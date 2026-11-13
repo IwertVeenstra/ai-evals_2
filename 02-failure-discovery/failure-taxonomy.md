@@ -4,7 +4,7 @@
 
 | Rank | Failure | Trust Tag | Frequency | Severity |
 |---|---|---|---|---|
-| 1 | Own company praise without factual basis | #HALLUCINATION | 10/20, HIGH | P0 |
+| 1 | False response at odds with available quantitative data point | #HALLUCINATION | 10/20, HIGH | P0 |
 | 2 | Generating new text | #HALLUCINATION | 10/20, HIGH | P0 |
 | 3 | Unprofessional tone | #UX_TRUST | 2/20, LOW | P1 |
 
