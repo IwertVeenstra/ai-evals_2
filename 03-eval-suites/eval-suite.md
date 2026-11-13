@@ -1,8 +1,8 @@
-# Eval Suite · Own company praise without factual basis
+# Eval Suite · False response at odds with available quantitative data point
 
 ## P0 failure (carried from Module 2)
 
-**Failure:** Own company praise without factual basis (#HALLUCINATION). The answer omits the actual rate-limit comparison and gives a false statement that implies the competitor is more restrictive
+**Failure:** False response at odds with available quantitative data point (#HALLUCINATION). The answer omits the actual rate-limit comparison and gives a false statement that implies the competitor is more restrictive
 
 - **Row:** 7
 - **Query:** Compare our API rate limits to Competitor Z.
