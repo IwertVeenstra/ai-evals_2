@@ -1,10 +1,10 @@
 # Ascend IQ Failure Audit
 
-13 confirmed failures: #HALLUCINATION ×10, #UX_TRUST ×2, #ROBUSTNESS ×0, #FAIRNESS ×1. I changed 10 of the judge’s calls.
+13 confirmed failures: #HALLUCINATION ×11, #UX_TRUST ×2, #ROBUSTNESS ×0, #FAIRNESS ×0. I changed 9 of the judge’s calls.
 
 | Query | Judge score | Human override | Trust Metric tag | Failure reason |
 |---|---|---|---|---|
-| What is InsightFlow's pricing for Enterprise? | 0 | 0 #FAIRNESS, The answer is correctly based on the source, but missed the updated price | #FAIRNESS | The answer gives the outdated Enterprise price; the reference states, “New Price (Updated yesterday): $59/mo.” |
+| What is InsightFlow's pricing for Enterprise? | 0 |  | #HALLUCINATION | The answer gives the outdated Enterprise price; the reference states, “New Price (Updated yesterday): $59/mo.” |
 | Summarize the top 3 complaints from DataViz's G2 reviews. | 1 |  |  |  |
 | Does InsightFlow support native SQL export? | 0 | 1, "Yes, you can export data to SQL databases via our API connector" is line with ""SQL Export" is possible via REST API, but there is no "Native Export" button in the UI." in my view |  | The answer incorrectly implies native export support; the reference states, “there is no ‘Native Export’ button in the UI.” |
 | List the confirmed speakers for SaaStr. | 0 |  | #HALLUCINATION | The answer incorrectly lists Sam Altman as confirmed; the reference states, “Sam Altman is listed as ‘Invited/Tentative.’” |
