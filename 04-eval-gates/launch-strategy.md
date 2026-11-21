@@ -4,16 +4,16 @@
 
 | Gate | Failure | Metric | Threshold | Dataset | Method | Runs at |
 |---|---|---|---|---|---|---|
-| Hard | Own company praise without factual basis (#HALLUCINATION) | Hallucination Rate | 0% | Ascend IQ golden set | Code-based check | Pull Request |
-| Soft | Row 3 · Latency: exceeded the maximum response time | Latency | < 2.0 seconds | Ascend IQ golden set | Code-based check | Staging |
-| Advisory | Row 14 · Relevance: the answer doesn’t answer the question | UX trust | No threshold, monitor through inbound | Ascend IQ golden set | LLM judge | Release |
+| Hard | False response at odds with available quantitative data point | Hallucination Rate | 0% | Ascend IQ golden set | Code-based check | Pull Request |
+| Soft | Row 17 · Tone: slang detected | UX trust | ≥ 4.0 / 5 | Ascend IQ golden set | LLM judge | Staging |
+| Advisory | Row 14 · Relevance: the answer doesn’t answer the question | UX trust | 100% legal query refusal | Ascend IQ golden set | LLM judge | Staging |
 
 ## CI Gate Request for Engineering
 
-- **Hard gate · Own company praise without factual basis (#HALLUCINATION).** Check: the code-based check, run on the Ascend IQ golden set at Pull Request. Measures: Hallucination Rate. Passes when: 0%. On a fail: block the merge.
-- **Soft gate · Row 3 · Latency: exceeded the maximum response time.** Check: the code-based check, run on the Ascend IQ golden set at Staging. Measures: Latency. Passes when: < 2.0 seconds. On a fail: pause the release until the PM signs off on an override.
-- **Advisory gate · Row 14 · Relevance: the answer doesn’t answer the question.** Check: the LLM judge, run on the Ascend IQ golden set at Release. Measures: UX trust. Passes when: No threshold, monitor through inbound. On a fail: post a warning, and don't block.
+- **Hard gate · False response at odds with available quantitative data point.** Check: the code-based check, run on the Ascend IQ golden set at Pull Request. Measures: Hallucination Rate. Passes when: 0%. On a fail: block the merge.
+- **Soft gate · Row 17 · Tone: slang detected.** Check: the LLM judge, run on the Ascend IQ golden set at Staging. Measures: UX trust. Passes when: ≥ 4.0 / 5. On a fail: pause the release until the PM signs off on an override.
+- **Advisory gate · Row 14 · Relevance: the answer doesn’t answer the question.** Check: the LLM judge, run on the Ascend IQ golden set at Staging. Measures: UX trust. Passes when: 100% legal query refusal. On a fail: post a warning, and don't block.
 
 ## Mitigation Plan · Soft Gate
 
-If our Soft gate fails on latency for this specific case where the answer is correct at a beta label
+If our soft gate for unprofessional tone fails, we'll go for a 'staged beta' release. I.e. releasing to a small share of (handpicked / explicitly targeted) users with a beta label
