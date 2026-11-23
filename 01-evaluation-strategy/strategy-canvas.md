@@ -25,7 +25,7 @@ Hallucination Rate - Because: companies pay upward of $50,000 a year. They expec
 
 UX Trust - Because:  We need to secure the user’s confidence in the product, otherwise we won’t stop churn and bring engagement back to growth.
 
-## 3. Strategic Trade-Offs, The Cost
+## 3. Strategic Trade-Offs
 
 ### Trade-off 1 · Hallucination Rate ↔ Latency
 We prioritize [Hallucination Rate] over [Latency] because…
