@@ -2,7 +2,7 @@
 
 > Repo file `ai-evals/01-evaluation-strategy/strategy-canvas.md` (the repo is your submission).
 
-## 1. Product Strategy, The Context
+## 1. The Context
 
 **Who it's for:** VP-level strategists and product leaders at Fortune 500 companies who pay upward of $50,000 a year for verified market intelligence.
 
@@ -10,7 +10,7 @@
 
 **What's at stake:** Engagement is dropping, Q4 retention is at risk, and the CPO wants Ascend IQ live for the top 50 enterprise accounts next month. One poor answer to the wrong client can do lasting damage to the relationship.
 
-## 2. Measurements, The Execution
+## 2. The Execution
 
 **User promise.** For [VP-level strategists and product leaders at Fortune 500 companies], Ascend IQ promises to [give 100% correct answers in under 2 seconds in easy to read professional business language to plain-language market intelligence questions] so that [Ascend Analytics engagement returns back to growth and client churn is minimised]
 
