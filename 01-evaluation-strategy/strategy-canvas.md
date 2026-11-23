@@ -1,4 +1,4 @@
-# AI Evaluation Strategy Canvas
+# AI Evaluation Strategy
 
 > Repo file `ai-evals/01-evaluation-strategy/strategy-canvas.md` (the repo is your submission).
 
